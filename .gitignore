@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-vue/
+release/
+release-v2/
+release-v3/
+*.log
+.DS_Store

@@ -1,0 +1,22 @@
+{
+  "appId": "com.portmanager.app",
+  "productName": "端口管理系统",
+  "directories": {
+    "output": "release-v3"
+  },
+  "files": [
+    "dist-vue/**/*",
+    "electron/**/*"
+  ],
+  "electronDownload": {
+    "mirror": "https://npmmirror.com/mirrors/electron/"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "dir",
+        "arch": ["x64"]
+      }
+    ]
+  }
+}
