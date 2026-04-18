@@ -199,12 +199,11 @@ function setupIPC() {
     try {
       // 验证扫描间隔：500-60000 毫秒
       if (newSettings.scanInterval !== undefined) {
-        if (!Number.isInteger(newSettings.scanInterval) ||
-            newSettings.scanInterval < 500 ||
-            newSettings.scanInterval > 60000) {
+        const interval = Number(newSettings.scanInterval)
+        if (!Number.isInteger(interval) || interval < 500 || interval > 60000) {
           return { success: false, message: '扫描间隔必须在 500-60000 毫秒之间' }
         }
-        settings.scanInterval = newSettings.scanInterval
+        settings.scanInterval = interval
       }
       saveSettings(settings)
       // 清除之前的防抖定时器
